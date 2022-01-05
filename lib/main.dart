@@ -12,10 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'FlutterFire Samples',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        brightness: Brightness.dark,
-      ),
+      theme: ThemeData(),
+      darkTheme: ThemeData.dark(), // standard dark theme
+      themeMode: ThemeMode.system,
       home: SignInScreen(),
     );
   }

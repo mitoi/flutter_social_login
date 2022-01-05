@@ -49,10 +49,8 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: CustomColors.firebaseNavy,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: CustomColors.firebaseNavy,
         title: AppBarTitle(),
       ),
       body: SafeArea(
@@ -93,7 +91,6 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 'Hello',
                 style: TextStyle(
-                  color: CustomColors.firebaseGrey,
                   fontSize: 26,
                 ),
               ),
@@ -101,7 +98,6 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 _user.displayName!,
                 style: TextStyle(
-                  color: CustomColors.firebaseYellow,
                   fontSize: 26,
                 ),
               ),
@@ -109,18 +105,17 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
               Text(
                 '( ${_user.email!} )',
                 style: TextStyle(
-                  color: CustomColors.firebaseOrange,
                   fontSize: 20,
                   letterSpacing: 0.5,
                 ),
               ),
               SizedBox(height: 24.0),
               Text(
-                'You are now signed in. To sign out of your account click the "Sign Out" button below.',
+                'You are now signed in.',
                 style: TextStyle(
-                    color: CustomColors.firebaseGrey.withOpacity(0.8),
-                    fontSize: 14,
-                    letterSpacing: 0.2),
+                  fontSize: 14,
+                  letterSpacing: 0.2,
+                ),
               ),
               SizedBox(height: 16.0),
               _isSigningOut
@@ -129,9 +124,6 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                     )
                   : ElevatedButton(
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                          Colors.redAccent,
-                        ),
                         shape: MaterialStateProperty.all(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
